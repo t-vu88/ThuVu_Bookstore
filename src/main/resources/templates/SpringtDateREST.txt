@@ -1,0 +1,14 @@
+
+ADD new book to the database:
+	curl -H "Content-Type: application/json" -X POST -d '{"title":"Nainen junassa","author":"Paula Hawkins","isbn":"9789511292432","publicationYear":2015,"category":{"name":"Jännitys"}}' http://localhost:8080/api/books
+
+DELETE book that has id = 4:
+	curl -X DELETE http://localhost:8080/api/books/4 
+	
+SEARCH for book that was published in 2015:
+	curl http://localhost:8080/api/books/search/findByPublicationYear?publicationYear=2015
+	
+UPDATE new name for the book "Nainen junassa":
+	curl -X PUT -H "Content-Type: application/json" -d '{
+  "title": "The girl on the train","author":"Paula Hawkins","isbn":"9789511292432","publicationYear":2015,"category":{"name":"Jännitys"} 
+}' http://localhost:8080/api/books/3
