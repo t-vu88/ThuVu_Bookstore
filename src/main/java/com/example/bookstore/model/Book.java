@@ -74,6 +74,14 @@ public class Book {
 		this.id = id;
 	}
 	
+	public Book(String title, String author, String isbn, int publicationYear) {
+		super();
+
+		this.title = title;
+		this.author = author;
+		this.isbn = isbn;
+		this.publicationYear = publicationYear;
+	}
 	public Book() {
 		super();
 	}
